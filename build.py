@@ -21,17 +21,18 @@ def render_post(file_name, frontmatter, content):
             title=frontmatter["title"], tags=frontmatter["tags"], content=content
         )
         file_object.write(post_content)
+    print("generated %s" % file_name)
 
 
 def build_blog():
     for post_name in posts:
         post_path = os.path.join(posts_dir, post_name)
-        name = post_name.split('.')[0]
+        name = post_name.split(".")[0]
         with open(post_path, "r") as file_object:
             content_md = file_object.read()
             post_fm = frontmatter.loads(content_md)
             content_html = markdowner.convert(post_fm.content)
-            render_post(name + '.html', post_fm, content_html)
+            render_post(name + ".html", post_fm, content_html)
 
 
 build_blog()
