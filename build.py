@@ -5,7 +5,6 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 curr_dir = os.getcwd()
 posts_dir = os.path.join(curr_dir, "posts")
-blog_dir = os.path.join(curr_dir, "blog")
 templates_dir = os.path.join(curr_dir, "templates")
 posts = os.listdir(posts_dir)
 markdowner = Markdown()
@@ -14,8 +13,8 @@ jinja_env = Environment(
 )
 
 
-def render_post(frontmatter, content):
-    post_path = os.path.join(blog_dir, frontmatter["title"] + ".html")
+def render_post(file_name, frontmatter, content):
+    post_path = os.path.join(posts_dir, file_name)
     with open(post_path, "w") as file_object:
         template = jinja_env.get_template("post.html")
         post_content = template.render(
@@ -27,11 +26,12 @@ def render_post(frontmatter, content):
 def build_blog():
     for post_name in posts:
         post_path = os.path.join(posts_dir, post_name)
+        name = post_name.split('.')[0]
         with open(post_path, "r") as file_object:
             content_md = file_object.read()
             post_fm = frontmatter.loads(content_md)
             content_html = markdowner.convert(post_fm.content)
-            render_post(post_fm, content_html)
+            render_post(name + '.html', post_fm, content_html)
 
 
 build_blog()
