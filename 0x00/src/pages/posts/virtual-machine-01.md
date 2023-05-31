@@ -28,7 +28,7 @@ be determined by the programmer using it.
 
 # What is a virtual machine
 
-In simple terms, a stack virtual machine is just a program 
+In simple terms, a virtual machine is just a program 
 (emulator) that takes in some bytecode and executes each instruction.
 
 For some instances this virtual machine can actually emulate the 
