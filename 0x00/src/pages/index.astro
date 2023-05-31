@@ -1,15 +1,29 @@
 ---
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = 'Home';
+const identity = {
+  firstName: "Daniel",
+  country: "Mexico",
+  occupation: "Software Engineer",
+  hobbies: ["Recreational programming", "Chess", "League of legends"],
+};
+const skills = ["C", "Go", "Python"];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	I am:
+	<ul>
+		<li>My name is: {identity.firstName}</li>
+		<li>I live in: {identity.country}</li>
+		<li>I work as a: {identity.occupation}</li>
+	</ul>
+	I'm interested in:
+	<ul>
+		{identity.hobbies.map((hobby) => <li>{hobby}</li>)}
+	</ul>
+	I work mostly with:
+	<ul>
+		{skills.map((skill) => <li>{skill}</li>)}
+	</ul>
+</BaseLayout>

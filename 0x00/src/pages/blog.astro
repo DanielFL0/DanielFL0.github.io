@@ -1,0 +1,13 @@
+---
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+const pageTitle = "Blog";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <ul>
+        {allPosts.map((post) => (<li><BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description}, thumbnail={post.frontmatter.image.url}/></li>))}
+    </ul>
+</BaseLayout>
