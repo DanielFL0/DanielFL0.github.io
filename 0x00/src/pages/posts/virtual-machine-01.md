@@ -36,8 +36,6 @@ behaviour of existing hardware, some popular examples are one of the
 many gameboy emulatores, on the other hand, the virtual machine can
 emulate a new one of it's kind "architecture" like a chip-8 emulator.
 
-NOTE: 
-
 # The big idea
 
 As I've stated before I'm not an expert on virtual machines nor 
@@ -57,9 +55,9 @@ virtual machine than a tutorial for implementing general-purpose
 virtual machines, but if you're like me and like to learn new
 stuff by hacking existing projects then this is a good way to
 learn how stack virtual machine A.K.A. bytecode interpreters
-work and how you can use some this series as an inspiration
-to build your own stack virtual machine! So hop on, grab your
-latest Python interpreter and C compiler and let's get started.
+work and how you can use this series as an inspiration to build 
+your own stack virtual machine! So hop on, grab your latest 
+Python interpreter and C compiler and let's get started.
 
 # The test program
 
