@@ -1,7 +1,5 @@
 # Welcome to danielfl0.github.io
 
-My personal space in the internet.
-
 ## 🚀 Project Structure
 
 Inside of this repo you will find the following structure
