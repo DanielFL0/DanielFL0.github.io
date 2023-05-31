@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: "../../layouts/MarkdownPostLayout.astro"
 title: "Stack virtual machines for fun and profit"
 date: 2023-05-31
 author: "Daniel"
