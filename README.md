@@ -26,4 +26,4 @@ All commands are run from the root of the project, from a terminal:
 | Directory                 | Project                                          |
 | :------------------------ | :----------------------------------------------- |
 | `0x00`                    | Hosts my personal blog                           |
-| `0x01`                    | Hosts the home page for reduce corp              |
+| `0x01`                    | Hosts my personal projects                       |
