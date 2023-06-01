@@ -1,0 +1,13 @@
+---
+import '../styles/global.css';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.astro";
+const allProjects = await Astro.glob("../pages/projects/*.md");
+const pageTitle = "Work";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <ul>
+        {allProjects.map((project) => (<li><Card url={project.url} title={project.frontmatter.title} description={project.frontmatter.description}/></li>))}
+    </ul>
+</BaseLayout>

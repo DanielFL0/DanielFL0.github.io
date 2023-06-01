@@ -1,12 +1,9 @@
 ---
-layout: "../../layouts/MarkdownPostLayout.astro"
+layout: "../../layouts/MarkdownLayout.astro"
 title: "Stack virtual machines for fun and profit"
 date: 2023-05-31
 author: "Daniel"
 description: "Always wondered how interpreters like Python and Ruby work? Here's your answer"
-image: {
-  url: "https://www.brickfanatics.com/wp-content/uploads/2023/01/REDDIT-LEGO-purple-Classic-Space-astronaut-minifigure-1009x1024.jpeg"
-}
 ---
 
 Last year I started diving deep into the art of compiler 
@@ -28,13 +25,19 @@ be determined by the programmer using it.
 
 # What is a virtual machine
 
-In simple terms, a virtual machine is just a program 
-(emulator) that takes in some bytecode and executes each instruction.
+In simple terms, a virtual machine is a computer program that 
+emulates a computer, more specifically, a computer architecture.
 
 For some instances this virtual machine can actually emulate the 
 behaviour of existing hardware, some popular examples are one of the
-many gameboy emulatores, on the other hand, the virtual machine can
+many gameboy emulators, on the other hand, the virtual machine can
 emulate a new one of it's kind "architecture" like a chip-8 emulator.
+
+Many programming languages like Python, Ruby, PHP, use a virtual
+machine inside the hood to execute their instructions, the main
+advantage of using this approach is that it allows programs to be
+portable. In some cases, these kind of virtual machines may also
+be refered as bytecode interpreters.
 
 # The big idea
 
