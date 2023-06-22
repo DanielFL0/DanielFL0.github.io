@@ -22,7 +22,8 @@ title: Dosan
 email: josedanielsaldana@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   My personal place on the internet, mainly interested in systems programming, compiler construction, graphics programming and virtual machines.
-baseurl: "" # the subpath of your site, e.g. /blog
+domain: danielfl0.github.io
+baseurl: https://danielfl0.github.io/ # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: yundawwy
 github_username:  DanielFL0
